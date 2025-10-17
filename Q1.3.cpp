@@ -28,14 +28,11 @@ ll factMod(int n) {
 int main() {
     int i = 100, j = 90, k = 80, l = 70;
     int sum = i + j + k + l;
-
     ll n = factMod(sum);
     ll d = (factMod(i) * factMod(j)) % MOD;
     d = (d * factMod(k)) % MOD;
     d = (d * factMod(l)) % MOD;
-
     ll result = (n * modInverse(d)) % MOD;
-
     cout << result << endl;
     return 0;
 }
